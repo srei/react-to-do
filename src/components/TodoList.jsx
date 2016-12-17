@@ -1,13 +1,23 @@
 import React from 'react';
+import RemoveToDo from './RemoveToDo.jsx';
 
-const TodoList = () => {
+
+//stateless functional component -> it recieves props as its first argument.
+const TodoList = ({todos}) => {
+	// constructor(props) {
+	// 	super(props);
+	// 	this.state = {
+	// 		listofitems = []
+	// 	};
+	// }
 	return (
 		<div className="todoListMain">
 			<div className="header">
 			<form>
-				<input placeholder="enter your task">
+				<input placeholder="Enter Your Task">
 				</input>
 				<button type="submit">Add Task </button>
+				<RemoveToDo/>
 			</form>
 			</div>
 		</div>
