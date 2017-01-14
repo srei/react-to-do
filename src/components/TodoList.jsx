@@ -1,25 +1,16 @@
 import React from 'react';
 import RemoveToDo from './RemoveToDo.jsx';
 
-
-//stateless functional component -> it recieves props as its first argument.
-const TodoList = ({todos}) => {
-	// constructor(props) {
-	// 	super(props);
-	// 	this.state = {
-	// 		listofitems = []
-	// 	};
-	// }
+// local state is only available to classes
+const TodoList = ({todos, addItem}) => {
 	return (
 		<div className="todoListMain">
-			<div className="header">
-			<form>
+			<form onSubmit={addItem}>
 				<input placeholder="Enter Your Task">
 				</input>
 				<button type="submit">Add Task </button>
 				<RemoveToDo/>
 			</form>
-			</div>
 		</div>
 	);
 };
